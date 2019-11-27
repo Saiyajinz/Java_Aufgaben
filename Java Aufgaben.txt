@@ -1,0 +1,221 @@
+package test_project;
+import java.util.Scanner;
+
+
+public class test_java {
+
+	public static void main(String[] args) {
+		
+	//1ste Aufgabe
+		//System.out.println("Hello World");
+		
+	//2ste Aufgabe
+		/*
+		int a, b, sum;
+		a = 2;
+	    b = 3;
+	    sum = a + b;
+	    System.out.println("Die Summe ist: " + sum);
+	    */
+		
+	//3te Aufgabe
+		/*
+		int a, b, sum;
+		a = 6;
+		b = 4;
+		sum = a * b;
+		System.out.println("Das Produk betraegt: " + sum);
+		*/
+		
+	//4te Aufgabe a
+		/*
+		double r, sum;
+		r = 6;
+		sum = Math.PI * r;
+		System.out.println("Der Radius betraegt: " + sum);
+		*/
+		
+	//4te Aufgabe b
+		/*
+		int a, b, sum;
+		a = 6;
+		b = 11;
+		sum = a * b;
+		System.out.println("Flaeche von Rechteck betraegt: " + sum);
+		*/
+		
+	//4te Aufgabe c
+		/*
+		double a, b, h, sum;
+		a = 3.3;
+		b = 4.9;
+		h = 10.8;
+		sum = a * b * h;
+		System.out.println("Volumen des Quaders: " + sum);
+		*/
+		
+	//5te Aufgabe a
+		/*
+		double y;
+		for(double x = 0; x < 6; x++) {
+			y = 3 * Math.pow(x, 3) - 11 * Math.pow(x, 2) + 12 * x - 100;
+			System.out.println("Formel loesung fuer x eingesetzt: " + x);
+			System.out.println(y);
+			}
+		*/
+		
+	//5te Aufgabe b
+		/*
+		double y;
+		for(double x = 0; x < 6; x++) {
+			y = Math.sqrt(3*x) + 12 * Math.pow(x, 2) - Math.PI;
+			System.out.println("Formel loesung fuer x eingesetzt: " + x);
+			System.out.println(y);
+			}
+		*/
+		
+	//6te Aufgabe a
+		/*
+		int y, sum;
+		y = 2;
+		for(int i = 0; i < 101; i++) {
+			sum = y * i;
+			System.out.println("Ergebnis: " + sum + " Eingesetzt: " + i);
+			}
+		*/
+		
+	//6te Aufgabe b
+		/*
+		double sum;
+		for(double x = 10; x < 21; x++) {
+			sum = Math.sqrt(x);
+			System.out.println("Wulzelwert " + x + " Betraegt: " + sum);
+			}
+		*/
+		
+	//6te Aufabe c
+		/*
+		for(int x = 0; x < 6; x++) {
+			System.out.println("Hallo");
+		}
+		*/
+		
+	//6te Aufgabe d
+		/*
+		double y;
+		for(double x = 0; x < 101; x++) {
+			y = 3 * Math.pow(x, 3) - 11 * Math.pow(x, 2) + 12 * x - 100;
+			System.out.println("Formel loesung fuer x eingesetzt: " + x);
+			System.out.println(y);
+			}
+		*/
+		
+	//6te Aufgabe e
+		/*
+		for(int x = 20; x > -1; x--) {
+			System.out.println("Zaehlerwert: " + x);
+		}
+		*/
+		
+	//7te Aufgabe a
+		/*
+		Scanner input = new Scanner(System.in);
+		System.out.print("Dein Name: ");
+		String x = input.next();
+		*/	
+		
+	//7te Aufgabe b
+		/*
+		double x;
+		System.out.print("Zahl eingeben: ");
+		Scanner input = new Scanner(System.in);
+		double y = input.nextDouble();
+		x = y * Math.PI;
+		System.out.println("Ergebnis: " + x);
+		*/
+		
+	//7te Aufgabe c
+		/*
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Laenge eingeben: ");
+		double x = input.nextDouble();
+		System.out.print("Breite eingeben: ");
+		double y = input.nextDouble();
+		System.out.print("Hoehe eingeben: ");
+		double h = input.nextDouble();
+		
+		double sum = x * y * h;
+		System.out.println("Ergebnis: " + sum);
+		*/
+		
+	//7te Aufgabe d
+		/*
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Geben Sie den Radius ein: ");
+		double r = input.nextDouble();
+		double v = 4 / 3 * Math.PI * Math.pow(r, 3);
+		System.out.println("Ergebnis: " + v);
+		*/
+		
+	//7te Aufgabe e + Erweiterung mit Switch case
+		/*
+		//Variablen Deklarieren
+		Scanner input = new Scanner(System.in);
+		int u, r, i;
+		char ohmg;
+		
+		//Auswahl des Modules
+		System.out.print("Waehlen Sie die Methode (u, r, i): ");
+		ohmg = input.next().charAt(0);
+		
+		//Abfrage wenn ungleich u, r, i ist
+		if(ohmg != 'u' && ohmg != 'r' && ohmg != 'i') {
+			System.out.println("Nur u, r oder i eingeben !");
+		}
+		
+		//Auswahl der Methode
+		switch(ohmg) {
+		case 'u': 
+			System.out.print("R: ");
+			r = input.nextInt();
+			System.out.print("I: ");
+			i = input.nextInt();
+			u = r * i;
+			System.out.println("U = " + u + " V");
+			break;
+			
+		case 'r':
+			System.out.print("U: ");
+			u = input.nextInt();
+			System.out.print("I: ");
+			i = input.nextInt();
+			r = u / i;
+			System.out.println("R = " + r + " Ohm");
+			break;
+			
+		case 'i': 
+			System.out.print("U: ");
+			u = input.nextInt();
+			System.out.print("R: ");
+			r = input.nextInt();
+			i = u / r;
+			System.out.println("I = " + i + " a");
+			break;
+		}
+		*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
