@@ -1,4 +1,5 @@
 package test_project;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -206,15 +207,218 @@ public class test_java {
 		}
 		*/
 		
+		//Aufgabe 8 a
+		/*
+		double a, ges;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Celsius: ");
+		a = input.nextDouble();
+		ges = a * 1.8 + 32;
+		System.out.println("F = " + ges);
+		*/	
+		
+		
+		//Aufgabe 8 b
+		/*
+		double a, b, ges;
+		char methode;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Waehlen Sie ihre Methode (q, r, k, v): ");
+		methode = input.next().charAt(0);
+		
+		switch(methode) {
+			
+			case 'q':
+				System.out.print("Seite eingeben: ");
+				a = input.nextDouble();
+				ges = a * a;
+				System.out.println("Flaeche = " + ges);
+				break;
+				
+			case 'r':
+				System.out.print("Laenge eingeben: ");
+				a = input.nextDouble();
+				System.out.print("Breite eigeben: ");
+				b = input.nextDouble();
+				ges = a * b;
+				System.out.println("Flaeche = " + ges);
+				break;
+			
+			case 'k':
+				System.out.print("Radius: ");
+				a = input.nextDouble();
+				ges = Math.pow(a, 2) * Math.PI;
+				System.out.println("Flaeche = " + ges);
+				break;
+			
+			case 'v':
+				System.out.print("Seite eingeben: ");
+				a = input.nextDouble();
+				ges = a * a * a;
+				System.out.println("Volumen = " + ges);
+				break;
+				
+			default:
+				System.out.println("Fehler bei der Eingabe !");		
+				
+		}
+		*/
+		
+		//Aufgabe 9
+		/*
+		double a, b, c, ges;
+		Scanner input = new Scanner(System.in);
+		char methode;
+		
+		
+		System.out.print("Methode(a,b,c): ");
+		methode = input.next().charAt(0);
+		
+		switch(methode) {
+		
+		case'a':
+			System.out.print("b = ");
+			b = input.nextDouble();
+			System.out.print("c = ");
+			c = input.nextDouble();
+			ges = Math.sqrt( Math.pow(b, 2) + Math.pow(c, 2));
+			System.out.println("a = " + ges);
+			break;
+			
+		case'b':
+			System.out.print("a = ");
+			a = input.nextDouble();
+			System.out.print("c = ");
+			c = input.nextDouble();
+			ges = Math.sqrt( Math.pow(a, 2) + Math.pow(c, 2));
+			System.out.println("b = " + ges);
+			break;
+			
+		case'c':
+			System.out.print("a = ");
+			a = input.nextDouble();
+			System.out.print("b = ");
+			b = input.nextDouble();
+			ges = Math.sqrt( Math.pow(a, 2) + Math.pow(b, 2));
+			System.out.println("c = " + ges);
+			break;
+		
+		default:
+			System.out.println("Fehler bei der Eingabe !");
+			
+		}
+		*/
+		
+		//Aufgabe 10
+		/*
+		String ort, vname, nname, adr, mail;
+		int tel;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Ort Waehlen (Florida, Osttirol): ");
+		ort = input.nextLine();
+		
+		switch(ort) {
+		
+		case "Florida":
+			System.out.println("Vorname: ");
+			vname = input.nextLine();
+			System.out.println("Nachname: ");
+			nname= input.nextLine();
+			System.out.println("Adresse: ");
+			adr = input.nextLine();
+			System.out.println("Tel-Nummer: ");
+			tel = input.nextInt();
+			System.out.println("Email: ");
+			mail = input.nextLine();
+			System.out.println("Buchungen:");
+			System.out.println("Vorname: " + vname);
+			System.out.println("Nachname: " + nname);
+			System.out.println("Adresse: " + adr);
+			System.out.println("Tel-Nummer: " + tel);
+			System.out.println("Email: " + mail);
+			input.close();
+			break;
+			
+		case "Osttirol":
+			System.out.println("Vorname: ");
+			vname = input.nextLine();
+			System.out.println("Nachname: ");
+			nname= input.nextLine();
+			System.out.println("Adresse: ");
+			adr = input.nextLine();
+			System.out.println("Tel-Nummer: ");
+			tel = input.nextInt();
+			System.out.println("Email: ");
+			mail = input.nextLine();
+			System.out.println("Buchungen:");
+			System.out.println("Vorname: " + vname);
+			System.out.println("Nachname: " + nname);
+			System.out.println("Adresse: " + adr);
+			System.out.println("Tel-Nummer: " + tel);
+			System.out.println("Email: " + mail);
+			input.close();
+			break;
+
+		default: 
+			System.out.println("Fehler bei der Eingabe !");
+		}
+		*/
+		
+		//Aufgabe 11 
+		/*
+		String belag, sorte;
+		Scanner input = new Scanner(System.in);
 		
 		
 		
+		do {
+		System.out.println("Welchen Belag?");
+		belag = input.nextLine();
 		
+		if(Objects.equals(belag, "Käse")) {
+			System.out.println("°Margherita");
+			System.out.println("°Salami");
+			System.out.println("°Hawaii");
+			sorte = input.nextLine();
+			if(Objects.equals(sorte, "Margherita")) {
+				System.out.println("Margherita");
+				break;
+			}
+			if(Objects.equals(sorte, "Salami")) {
+				System.out.println("Salami");
+				break;
+			}
+			if(Objects.equals(sorte, "Hawaii")) {
+				System.out.println("Hawaii");
+				break;
+			}
+			
+		}
+		if(Objects.equals(belag, "Salami")) {
+			System.out.println("Salami");
+			break;
+		}
+		if(Objects.equals(belag, "Diavolo")) {
+			System.out.println("Diavolo");
+			break;
+		}
+		if(Objects.equals(belag, "Hawaii")) {
+			System.out.println("Hawaii");
+			break;
+		}
+		else {
+			System.out.println("Dieser Belag wurde nicht gefunden !");
+			System.out.println("");
+
+		}
 		
+		}while(true);
+		*/
 		
-		
-		
-		
+
 		
 	}
 
